@@ -60,11 +60,11 @@ class Usuario {
 
 	}
 
-	/*public static function getList(){
+	public static function getList(){
 
 		$sql = new Sql();
 
-		return $sql->select("SELECT * FROM tb_usuarios ORDER BY deslogin;");
+		return $sql->select("SELECT * FROM tb_usuarios ORDER BY deslogin");
 
 	}
 
@@ -158,7 +158,7 @@ class Usuario {
 		$this->setDeslogin($login);
 		$this->setDessenha($password);
 
-	}*/
+	}
 
 	public function __toString(){
 
