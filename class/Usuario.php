@@ -48,14 +48,19 @@ class Usuario {
 		));
 
 		if (count($results) > 0) {
+			$row = $results[0];
 
-			$this->setData($results[0]);
+			$this -> setIdusuario($row['idusuario']);
+			$this -> setDeslogin($row['deslogin']);
+			$this -> setDessenha($row['dessenha']);
+			$this -> setDtcadastro(new DateTime($row['dtcadastro']));
+			//$this->setData($results[0]);
 
 		}
 
 	}
 
-	public static function getList(){
+	/*public static function getList(){
 
 		$sql = new Sql();
 
@@ -153,7 +158,7 @@ class Usuario {
 		$this->setDeslogin($login);
 		$this->setDessenha($password);
 
-	}
+	}*/
 
 	public function __toString(){
 
